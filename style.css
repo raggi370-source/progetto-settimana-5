@@ -3,7 +3,9 @@
 
 /* Aggiungi qui le tue regole, mobile-first. */
 /* Reset */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -15,12 +17,11 @@ body {
   color: #1a1a1a;
   background-color: #ffffff;
 
-  
+
 }
-body.dark main {
-  background-color: #121212;
-  color: #f5f5f5;
-}
+
+
+
 
 img {
   max-width: 100%;
@@ -31,97 +32,103 @@ a {
   color: inherit;
   text-decoration: none;
 }
-#site-header{
-  background-color:#ffff;
-  color: #000000;
-  height: 130px;
+#site-header {
+  background-color: #ffffff;
+  color:hsl(150, 60%, 30%);
+  height: 110px;
   position: sticky;
   z-index: 1000;
   top: 0;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   max-width: 568px;
   margin: 0 auto;
-  padding: 0 20px; 
+  padding: 0 20px;
+  transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-#site-header.scrolled{
-  background-color:hsl(150, 60%, 30%) ;
+#site-header.scrolled {
+  background-color: hsl(150, 60%, 30%);
   color: #ffffff;
 }
-.container{
+
+.container {
   max-width: 578px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-.logo{
+.logo {
   display: flex;
   justify-content: center;
+  padding-top: 30px;
 }
-.nav-links{
+
+.nav-links {
   display: flex;
-  justify-content:space-between ;
+  justify-content: space-between;
   list-style: none;
-  margin-top: 60px;
+  margin-top: 25px;
 }
-.tema{
+
+.tema {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: 1px #121212;
+  box-shadow: 0 0 1px #121212;
   cursor: pointer;
   border: none;
 }
-#nav_transition{
-  color:hsl(150, 60%, 30%);
-  background-color: #ffffff;
+
+/* Cambiato in classe e unite le transizioni */
+.nav-link-item {
+  color: hsl(150, 60%, 30%);
   width: 80px;
   text-align: center;
-   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  border-radius: 4px ;
-  
+  border-radius: 4px;
+  transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
-#nav_transition:hover{
-  background-color: hsla(150, 59%, 30%, 0.149);
+
+.nav-link-item:hover {
+  background-color:  hsla(150, 59%, 30%, 0.223);
   transform: translateY(-3px);
-  
-
-
 }
 
+.nav-link-item.scrolled {
+  color: #ffffff;
+}
 
 
 
 
 
 /* parte centrale*/
-.formato{
-  max-width: 568px;   
-  margin: 0 auto;      
+.formato {
+  max-width: 568px;
+  margin: 0 auto;
   padding: 0 20px;
   background-color: #fafafa
-
 }
 
 /* parte centrale */
-.hero{
-  background-color:hsl(150, 60%, 30%);
+.hero {
+  background-color: hsl(150, 60%, 30%);
   color: #ffff;
-  text-align: center; 
+  text-align: center;
 
 }
-h2{
+
+h2 {
   padding-top: 100px;
   top: 800px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.primo_paragrafo{
+.primo_paragrafo {
   margin: 0px 50px 0px 50px;
 }
 
-.preventivo{
+.preventivo {
   border-radius: 20px;
   background-color: #ffffff;
   color: hsl(150, 60%, 30%);
@@ -129,20 +136,21 @@ h2{
   height: 30px;
   margin: 10px 0px 100px 0px;
   border: none;
-  
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 
 }
-.preventivo:hover{
+
+.preventivo:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
- 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
 }
 
 
 
 /*parte fotografie*/
-#imaggini{
+#imaggini {
   background-color: #ffff;
   width: 400px;
   height: 400px;
@@ -155,40 +163,65 @@ h2{
 
 /* sezione schede prima del footer*/
 
-.titolosottoimg{
-  color:hsl(150, 60%, 30%);
+.titolosottoimg {
+  color: hsl(150, 60%, 30%);
   text-align: center;
 }
 
 
-.scheda{
-  background-color: #ffff ;
-  
+.scheda {
+  background-color: #ffff;
+
   margin: 30px auto;
   border-radius: 20px;
   text-align: center;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.scheda:hover{
+
+.scheda:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+.scheda2 {
+  background-color: #ffff;
 
-#imgsceda{
-  color:hsl(150, 60%, 30%) ;
+  margin: 30px auto;
+  border-radius: 20px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scheda2:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+#imgsceda {
+  color: hsl(150, 60%, 30%);
   font-size: 30px;
   padding: 10px;
 }
 
-.titolo_schede{
-  color:hsl(150, 60%, 30%) ;
+.titolo_schede {
+  color: hsl(150, 60%, 30%);
+  font-size: 20px;
+  margin: 0;
+}
+.titolo_schede_nome {
+  color: hsl(150, 60%, 30%);
   font-size: 20px;
   margin: 0;
 }
 
 
+
+
+
+
+
+
+
 /*FOOTER*/
-#site-footer{
+#site-footer {
   height: 150px;
   text-align: center;
   background-color: #121212;
@@ -198,7 +231,60 @@ h2{
   justify-content: center;
 
 }
-footer p{
+
+footer p {
   margin: 0;
   color: #ffffff;
 }
+
+
+
+
+/* bottone body tema*/
+/* Tema scuro */
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark #site-header {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+body.dark .formato,
+body.dark #imaggini,
+body.dark .scheda {
+  background-color: #202020;
+}
+
+body.dark .nav-link-item,
+body.dark .titolosottoimg,
+body.dark .titolo_schede {
+  color: #9ad7b2;
+}
+
+.tema {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.dark .tema {
+  background-color: #333333;
+  color: #ffffff;
+}
+body.dark {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+body.dark #site-header {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+
