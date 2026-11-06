@@ -32,9 +32,10 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
 #site-header {
   background-color: #ffffff;
-  color:hsl(150, 60%, 30%);
+  color: hsl(150, 60%, 30%);
   height: 110px;
   position: sticky;
   z-index: 1000;
@@ -89,7 +90,7 @@ a {
 }
 
 .nav-link-item:hover {
-  background-color:  hsla(150, 59%, 30%, 0.223);
+  background-color: hsla(150, 59%, 30%, 0.223);
   transform: translateY(-3px);
 }
 
@@ -152,7 +153,7 @@ h2 {
 
 
 /*parte fotografie*/
-#imaggini {
+.imaggini {
   background-color: #ffff;
   width: 400px;
   height: 400px;
@@ -195,7 +196,7 @@ h2 {
   margin: 15px 30PX;
   border-radius: 20px;
   text-align: center;
-  
+
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -203,6 +204,7 @@ h2 {
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+
 #imgsceda {
   color: hsl(150, 60%, 30%);
   font-size: 30px;
@@ -223,21 +225,23 @@ h2 {
   margin: 0;
 }
 
-h5{
-  margin:0;
-  color:hsl(150, 60%, 30%) ;
+h5 {
+  margin: 0;
+  color: hsl(150, 60%, 30%);
 
 }
-.paragrafo_schede_nome{
+
+.paragrafo_schede_nome {
   margin: 15px 20px;
 }
-.sfondo_team{
-  background-color:hsl(150, 60%, 97%);
+
+.sfondo_team {
+  background-color: hsl(150, 60%, 97%);
 }
 
-.loghi_div{
-  
-  background-color:  hsl(150, 60%, 30%);
+.loghi_div {
+
+  background-color: hsl(150, 60%, 30%);
   color: #fafafa;
   border-radius: 50%;
   width: 80px;
@@ -249,12 +253,13 @@ h5{
 
 
 }
-.centra_team{
+
+.centra_team {
   display: flex;
   justify-content: center;
   padding-top: 40px;
   padding-bottom: 15px;
-  }
+}
 
 
 
@@ -280,22 +285,25 @@ h5{
 #site-footer p {
   margin: 0;
   color: #ffffff;
-  
+
 }
+
 .contatti_social {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
   width: 100%;
-  
+
 }
-.loghetti_footer{border :1px solid #f5f5f5;
+
+.loghetti_footer {
+  border: 1px solid #f5f5f5;
   border-radius: 50%;
   width: 30px;
   height: 30px;
   margin: 10px;
-  
+
 }
 
 
@@ -322,7 +330,7 @@ body.dark #site-header {
 }
 
 body.dark .formato,
-body.dark #imaggini,
+body.dark .imaggini,
 body.dark .scheda {
   background-color: #202020;
 }
@@ -346,6 +354,7 @@ body.dark .tema {
   background-color: #333333;
   color: #ffffff;
 }
+
 body.dark {
   background-color: #121212;
   color: #f5f5f5;
@@ -374,38 +383,163 @@ body.dark .loghi_div {
   background-color: #9ad7b2;
   color: #121212;
 }
-body.dark .scheda2{
+
+body.dark .scheda2 {
   background-color: #222222;
 }
-body.dark .sfondo_team{
+
+body.dark .sfondo_team {
   background-color: #3c3c3c57;
 }
 
 
 
-@media (min-width :568px){
-  .formato {
-    max-width: 768px;
-  }
+.popup[hidden] {
+  display: none;
+}
 
-  #site-heder {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    height: 40px;
-    
-  }
-  .logo{
-     justify-content: flex-start;
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  }.nav-links{
-    display :flex ;
-    padding-left: 0;
-    align-items: flex-end;
-    justify-content: flex-end;
-    margin:0;
-    padding: 0;
-    list-style: none;
+}
+
+.popup-contenuto {
+  position: relative;
+  width: min(90%, 400px);
+  padding: 24px;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+#chiudi-popup {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.pop_titolo {
+  color: hsl(150, 60%, 30%);
+  padding: 0;
+}
+
+#contatto_p {
+  font-size: 13px;
+}
+
+#nome {
+  color: hsl(0, 0%, 0%);
+  font-size: 20px;
+  padding-right: 1000px;
+  font-weight: bold;
+}
+
+#nome_input {
+  border-radius: 8px;
+  border: 1px solid black;
+  width: 350px;
+  height: 30px;
+ 
+  transition: background-color 0.4s ease,
+   color 0.4s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+#nome_input:hover{
+  border: 3px solid hsl(150, 60%, 30%);
+}
+
+#email {
+  color: hsl(0, 0%, 0%);
+  font-size: 20px;
+  padding-right: 1000px;
+  font-weight: bold;
+}
+
+#email_input {
+  border-radius: 8px;
+  border: 1px solid black;
+  width: 350px;
+  height: 30px;
+  transition: background-color 0.4s ease,
+   color 0.4s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+#email_input:hover{
+  border: 3px solid hsl(150, 60%, 30%);
+}
+
+#option_label {
+  color: hsl(0, 0%, 0%);
+  font-size: 20px;
+  padding-right: 1000px;
+  font-weight: bold;
+}
+
+#option_input {
+  border-radius: 8px;
+  border: 1px solid black;
+  width: 350px;
+  height: 30px;
+  transition: background-color 0.4s ease,
+   color 0.4s ease, transform 0.2s ease,
     
-  }
+}
+
+#option {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 36px;
+  margin-top: 6px;
+  padding: 5px 8px;
+  border: 1px solid hsl(150, 60%, 30%);
+  border-radius: 8px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font: inherit;
+}
+
+#messagio {
+  color: hsl(0, 0%, 0%);
+  font-size: 20px;
+  padding-right: 1000px;
+  font-weight: bold;
+}
+
+#messagio_input {
+  border-radius: 4px;
+  border: 1px solid black;
+  width: 350px;
+  height: 100px;
+ transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+#messagio_input:hover{
+  border:3px solid hsl(150, 60%, 30%);
+}
+
+#invia_button {
+  background-color: hsl(150, 60%, 30%);
+  border-radius: 20px;
+  height: 40px;
+  width: 130px;
+  border: none;
+  color: white;
+  margin-top: 15px;
+   transition: background-color 0.4s ease, color 0.4s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+#invia_button:hover{
+  background-color:#ffff;
+  border: 1px solid  hsl(150, 60%, 30%);
+  transform: translateY(-3px);
+  color: #121212;
 }

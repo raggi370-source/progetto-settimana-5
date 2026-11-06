@@ -16,16 +16,44 @@
     <div class="container">
       <div class="logo">
         <i class="fa-solid fa-seedling">Bloom</i>
-
       </div>
 
-      <ul class="nav-links">
-        <li class="nav-link-item">Servizi</li>
-        <li class="nav-link-item">Lavori</li>
-        <li class="nav-link-item">Team</li>
-        <li class="nav-link-item">Contatti</li>
-        <button class="tema" type="button" aria-label="attiva tema scuro"></button>
-      </ul>
+      <div>
+        <ul class="nav-links">
+          <li class="nav-link-item">Servizi</li>
+          <li class="nav-link-item">Lavori</li>
+          <li class="nav-link-item">Team</li>
+          <li class="nav-link-item">Contatti</li>
+          <button class="tema" type="button" aria-label="Attiva tema scuro"></button>
+        </ul>
+      </div>
+    </div>
+
+    <div id="preventivo-popup" class="popup" hidden>
+      <div class="popup-contenuto">
+        <button id="chiudi-popup" type="button" aria-label="Chiudi">×</button>
+
+        <h2 class="pop_titolo">Richiedi un preventivo</h2>
+        <p id="contatto_p">Ricontattaci il tuo progetto: ti rispondiamo entro 48ore</p>
+        <label id="nome" for="nome">Nome</label>
+        <input id="nome_input" type="text" placeholder="scrivi il tuo nome">
+
+        <label id="email" for="email">Email</label>
+        <input id="email_input" type="email" placeholder="scrivi la tua mail">
+        <label id="option_label" for="option">Servizio</label>
+        
+        <select id="option" class="scegli" name="servizio">
+          <option value="" selected disabled>Di cosa hai bisogno?</option>
+          <option value="informazioni">Informazioni</option>
+          <option value="web-design">Web Design</option>
+          <option value="programmazione">Programmazione</option>
+        </select>
+        <label id="messagio" for="text">Messagio</label>
+
+        <input id="messagio_input" type="text">
+
+        <button id="invia_button" type="button" aria-placeholder="se vuoi aggiungere qualcosa">Invia richiesta</button>
+      </div>
     </div>
   </header>
 
@@ -54,115 +82,105 @@
 
 
 
-
       <section class="services">
-        <!-- 3 card servizi: icona + titolo + descrizione -->
-        <h3></h3>
-
-        <div id="imaggini">
-          <img src="img/works.png" >
-        </div>
-        <div id="imaggini">
-          <img src="img/works.png">
-        </div>
-        <div id="imaggini">
-          <img src="img/works.png">
-        </div>
-        <div id="imaggini">
-          <img src="img/works.png">
-        </div>
-        <div id="imaggini">
-          <img src="img/works.png">
-        </div>
-        <div id="imaggini">
-          <img src="img/works.png">
-        </div>
-
-
-
-
-
-
-        <!--sezione schede prima del footer-->
-        <div>
-          <h3 class="titolosottoimg"> I nostri servizi</h3>
-          <div class="animation">
-
-            <div class="scheda">
-              <i id="imgsceda" class="fa-solid fa-pen-nib icona-servizio"></i>
-              <h4 class="titolo_schede">Identita Visiva</h4>
-              <p class="paragrafo_schede">Logo ,palettte ,tipografia e linea guida
-                per un brand coerente riconoscibile
-                e duraturo</p>
-            </div>
-
-            <div class="scheda">
-              <i id="imgsceda" class="fa-solid fa-desktop icona-servizio"></i>
-              <h4 class="titolo_schede">Web Design</h4>
-              <p class="paragrafo_schede">siti vetrina e lading page responsive,acceibili
-                e ottimizate per dispositivi mobile
-              </p>
-            </div>
-
-            <div class="scheda">
-              <i id="imgsceda" class="fa-solid fa-film icona-servizio"></i>
-              <h4 class="titolo_schede">Motion Grafphic</h4>
-              <p class="paragrafo_schede"> animazioni e brevi video per
-                raccontare il prodotto i social
-                le cmapagne
-                publicitarie
-              </p>
-            </div>
+        <div class="galleria">
+          <div class="imaggini">
+            <img src="img/works.png" alt="Progetto 1">
           </div>
+          <div class="imaggini">
+            <img src="img/works.png" alt="Progetto 2">
+          </div>
+          <div class="imaggini"><img src="img/works.png" alt="Progetto 3"></div>
+          <div class="imaggini"><img src="img/works.png" alt="Progetto 4"></div>
+          <div class="imaggini"><img src="img/works.png" alt="Progetto 5"></div>
+          <div class="imaggini"><img src="img/works.png" alt="Progetto 6"></div>
         </div>
-
-        <div class="sfondo_team">
-
-          <h3 class="titolosottoimg"> i nostri team</h3>
-          <div class="scheda2">
-
-            <div class="centra_team">
-              <div class="loghi_div"> GR </div>
-            </div>
-            <h4 class="titolo_schede_nome">Giulia Rossi</h4>
-            <h5>Art Director</h5>
-            <p class="paragrafo_schede_nome">Cura di identità visiva dei progetti
-              dal concept alla
-              consegna finale
-            </p>
-          </div>
-
-          <div class="scheda2">
-            <div class="centra_team">
-              <div class="loghi_div"> MB </div>
-            </div>
-            <h4 class="titolo_schede_nome">Mario Bianchi</h4>
-            <h5>Web Designer</h5>
-            <p class="paragrafo_schede_nome">progetto interfacce responsive
-              e accesibili,con un occhio al codice
-            </p>
-          </div>
-          <div class="scheda2">
-            <div class="centra_team">
-              <div class="loghi_div"> SV </div>
-            </div>
-            <h4 class="titolo_schede_nome">Sara Verdi</h4>
-            <h5>Motion Desiner</h5>
-            <p class="paragrafo_schede_nome"> da movimento ai brand
-              con animazioni brevi e contenuti
-              social
-            </p>
-          </div>
       </section>
 
-    </div>
+
+
+
+
+      <!--sezione schede prima del footer-->
+      <div>
+        <h3 class="titolosottoimg"> I nostri servizi</h3>
+        <div class="animation">
+
+          <div class="scheda">
+            <i id="imgsceda" class="fa-solid fa-pen-nib icona-servizio"></i>
+            <h4 class="titolo_schede">Identita Visiva</h4>
+            <p class="paragrafo_schede">Logo ,palettte ,tipografia e linea guida
+              per un brand coerente riconoscibile
+              e duraturo</p>
+          </div>
+
+          <div class="scheda">
+            <i id="imgsceda" class="fa-solid fa-desktop icona-servizio"></i>
+            <h4 class="titolo_schede">Web Design</h4>
+            <p class="paragrafo_schede">siti vetrina e lading page responsive,acceibili
+              e ottimizate per dispositivi mobile
+            </p>
+          </div>
+
+          <div class="scheda">
+            <i id="imgsceda" class="fa-solid fa-film icona-servizio"></i>
+            <h4 class="titolo_schede">Motion Grafphic</h4>
+            <p class="paragrafo_schede"> animazioni e brevi video per
+              raccontare il prodotto i social
+              le cmapagne
+              publicitarie
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="sfondo_team">
+
+        <h3 class="titolosottoimg"> i nostri team</h3>
+        <div class="scheda2">
+
+          <div class="centra_team">
+            <div class="loghi_div"> GR </div>
+          </div>
+          <h4 class="titolo_schede_nome">Giulia Rossi</h4>
+          <h5>Art Director</h5>
+          <p class="paragrafo_schede_nome">Cura di identità visiva dei progetti
+            dal concept alla
+            consegna finale
+          </p>
+        </div>
+
+        <div class="scheda2">
+          <div class="centra_team">
+            <div class="loghi_div"> MB </div>
+          </div>
+          <h4 class="titolo_schede_nome">Mario Bianchi</h4>
+          <h5>Web Designer</h5>
+          <p class="paragrafo_schede_nome">progetto interfacce responsive
+            e accesibili,con un occhio al codice
+          </p>
+        </div>
+        <div class="scheda2">
+          <div class="centra_team">
+            <div class="loghi_div"> SV </div>
+          </div>
+          <h4 class="titolo_schede_nome">Sara Verdi</h4>
+          <h5>Motion Desiner</h5>
+          <p class="paragrafo_schede_nome"> da movimento ai brand
+            con animazioni brevi e contenuti
+            social
+          </p>
+        </div>
+        </section>
+
+      </div>
   </main>
 
   <footer id="site-footer">
     <!-- Logo, social icons, copyright -->
     <i class="fa-solid fa-seedling">Bloom</i>
     <p class=""> studio di desain fondato nel 2026</p>
-    <div class="contatti_social" >
+    <div class="contatti_social">
       <div class="loghetti_footer">
         <i class="fa-brands fa-instagram"></i>
       </div>

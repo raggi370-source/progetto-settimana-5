@@ -21,3 +21,16 @@ const bottoneTema = document.querySelector(".tema");
 bottoneTema.addEventListener("click", () => {
   document.body.classList.toggle("dark");
 });
+
+
+const popupPreventivo = document.querySelector("#preventivo-popup");
+const bottonePreventivo = document.querySelector(".preventivo");
+const bottoneChiudi = document.querySelector("#chiudi-popup");
+
+bottonePreventivo.addEventListener("click", () => {
+  popupPreventivo.hidden = false;
+});
+
+bottoneChiudi.addEventListener("click", () => {
+  popupPreventivo.hidden = true;
+});
