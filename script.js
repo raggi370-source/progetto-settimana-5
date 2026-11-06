@@ -37,11 +37,14 @@ bottoneChiudi.addEventListener("click", () => {
   popupPreventivo.hidden = true;
 });
 
-invia_button.addEventListener("click", () => {
-  const messaggio = document.querySelector("#messaggio-grazie");
+const contenitoreGrazie = document.querySelector(".messaggio-grazie-div");
+const messaggio = document.querySelector("#messaggio-grazie");
 
-  messaggio.textContent = "Grazie! Abbiamo ricevuto la tua richiesta.";
-  messaggio.hidden = false;
+invia_button.addEventListener("click", () => {
+  messaggio.innerHTML =
+    '<i class="fa-solid fa-circle-check"></i> Grazie! Abbiamo ricevuto la tua richiesta.';
+
+  contenitoreGrazie.hidden = false;
 
   setTimeout(() => {
     popupPreventivo.hidden = true;

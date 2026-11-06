@@ -397,6 +397,9 @@ body.dark .sfondo_team {
 .popup[hidden] {
   display: none;
 }
+#messaggio-grazie[hidden] {
+  display: none;
+}
 
 .popup {
   position: fixed;
@@ -407,6 +410,9 @@ body.dark .sfondo_team {
   align-items: center;
   justify-content: center;
 
+  
+  
+ 
 }
 
 .popup-contenuto {
@@ -542,4 +548,22 @@ body.dark .sfondo_team {
   border: 1px solid  hsl(150, 60%, 30%);
   transform: translateY(-3px);
   color: #121212;
+}
+
+.messaggio-grazie-div{
+  background-color: hsla(150, 59%, 30%, 0.208);
+  border-radius: 8px;
+  width: 325px;
+}
+
+
+#messaggio-grazie {
+  color: hsl(150, 60%, 30%);
+  background-color: #e8f5ee;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+#messaggio-grazie i {
+  margin-right: 6px;
 }
