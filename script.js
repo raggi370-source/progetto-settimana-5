@@ -26,6 +26,8 @@ bottoneTema.addEventListener("click", () => {
 const popupPreventivo = document.querySelector("#preventivo-popup");
 const bottonePreventivo = document.querySelector(".preventivo");
 const bottoneChiudi = document.querySelector("#chiudi-popup");
+const invia_button =document.querySelector(`#invia_button`);
+
 
 bottonePreventivo.addEventListener("click", () => {
   popupPreventivo.hidden = false;
@@ -33,4 +35,15 @@ bottonePreventivo.addEventListener("click", () => {
 
 bottoneChiudi.addEventListener("click", () => {
   popupPreventivo.hidden = true;
+});
+
+invia_button.addEventListener("click", () => {
+  const messaggio = document.querySelector("#messaggio-grazie");
+
+  messaggio.textContent = "Grazie! Abbiamo ricevuto la tua richiesta.";
+  messaggio.hidden = false;
+
+  setTimeout(() => {
+    popupPreventivo.hidden = true;
+  }, 2000);
 });
